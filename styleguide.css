@@ -1,0 +1,9 @@
+:root {
+  --label-colordarkprimary: rgba(255, 255, 255, 1);
+  --callout-bold-font-family: "SF Pro Text", Helvetica;
+  --callout-bold-font-weight: 550;
+  --callout-bold-font-size: 16px;
+  --callout-bold-letter-spacing: -0.3199999928474426px;
+  --callout-bold-line-height: 16px;
+  --callout-bold-font-style: normal;
+}
