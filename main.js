@@ -234,13 +234,14 @@ function print_data(coin1, coin2, general_data, a, b) {
     ).toLocaleString()}`; // ur Pnl
   }
 
-  // if (a.ur_pnl < 0) {
-  //   document.querySelector(".ur_pnl_coin_1").classList.add("lo-color");
-  //   document.querySelector(".ur_pnl_coin_1").classList.remove("lai-color");
-  // } else if (a.ur_pnl > 0) {
-  //   document.querySelector(".ur_pnl_coin_1").classList.add("lai-color");
-  //   document.querySelector(".ur_pnl_coin_1").classList.remove("lo-color");
-  // }
+  if (a.ur_pnl < 0) {
+    document.querySelector(".ur_pnl_coin_1").classList.add("lo-color");
+    document.querySelector(".ur_pnl_coin_1").classList.remove("lai-color");
+  } else if (a.ur_pnl > 0) {
+    document.querySelector(".ur_pnl_coin_1").classList.add("lai-color");
+    document.querySelector(".ur_pnl_coin_1").classList.remove("lo-color");
+  }
+
   document.querySelector(".roe_coin_1").innerHTML =
     a.ROE > 0 ? "+" + a.ROE.toFixed(2) + "%" : a.ROE.toFixed(2) + "%"; // ROE
   if (a.ROE < 0) {
@@ -321,6 +322,7 @@ function print_data(coin1, coin2, general_data, a, b) {
       b.ur_pnl.toFixed(3)
     ).toLocaleString(); // ur Pnl
   }
+
   if (b.ur_pnl < 1000 && b.ur_pnl > -1000) {
     document.querySelector(".ur_dollar_coin_2").innerHTML = `≈$${Number(
       b.ur_pnl.toFixed(2)
@@ -330,6 +332,15 @@ function print_data(coin1, coin2, general_data, a, b) {
       b.ur_pnl.toFixed(2)
     ).toLocaleString()}`; // ur Pnl
   }
+
+  if (b.ur_pnl < 0) {
+    document.querySelector(".ur_pnl_coin_2").classList.add("lo-color");
+    document.querySelector(".ur_pnl_coin_2").classList.remove("lai-color");
+  } else if (b.ur_pnl > 0) {
+    document.querySelector(".ur_pnl_coin_2").classList.add("lai-color");
+    document.querySelector(".ur_pnl_coin_2").classList.remove("lo-color");
+  }
+
   document.querySelector(".roe_coin_2").innerHTML =
     b.ROE > 0 ? "+" + b.ROE.toFixed(2) + "%" : b.ROE.toFixed(2) + "%"; // ROE
   if (b.ROE < 0) {
